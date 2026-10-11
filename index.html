@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0c1018">
+    <title>Картошка Бирён | Virtual Pet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <section id="welcomeScreen" class="welcome-screen">
+        <div class="welcome-content">
+            <div class="logo-mark">KB<span>+</span></div>
+            <p class="eyebrow">YOUR VIRTUAL COMPANION</p>
+            <h1>КАРТОШКА<br><span>БИРЁН</span></h1>
+            <p class="welcome-copy">
+                Қаҳрамони худро тарбия кун. Вазифаҳоро иҷро кун.
+                Сатҳи худро баланд бардор.
+            </p>
+            <div class="welcome-tags">
+                <span>3D STYLE</span>
+                <span>LEVEL UP</span>
+                <span>YOUR PET</span>
+            </div>
+            <button id="startButton" class="btn btn-primary btn-large">
+                ОҒОЗИ БОЗӢ <span>↗</span>
+            </button>
+            <p class="local-note">Пешрафт дар браузери ту нигоҳ дошта мешавад.</p>
+        </div>
+    </section>
+
+    <main id="gameApp" class="app hidden">
+        <header class="topbar">
+            <a href="#" class="brand" aria-label="Картошка Бирён">
+                <span class="brand-symbol">KB</span>
+                <span class="brand-name">КАРТОШКА <b>БИРЁН</b></span>
+            </a>
+            <div class="topbar-right">
+                <div class="coin-pill"><span>◈</span><strong id="coinCount">0</strong></div>
+                <button id="settingsButton" class="square-button" title="Танзимот">⚙</button>
+            </div>
+        </header>
+
+        <div class="dashboard">
+            <aside class="sidebar">
+                <p class="side-label">МЕНЮ</p>
+                <button class="nav-button active" data-page="home"><span>⌂</span> Асосӣ</button>
+                <button class="nav-button" data-page="shop"><span>▦</span> Мағоза</button>
+                <button class="nav-button" data-page="tasks"><span>☷</span> Вазифаҳо</button>
+                <button class="nav-button" data-page="stats"><span>↗</span> Натиҷаҳо</button>
+                <div class="sidebar-bottom">
+                    <div class="online-dot"></div>
+                    <span>БОЗӢ ОМОДА АСТ</span>
+                </div>
+            </aside>
+
+            <div class="main-content">
+                <section id="page-home" class="page">
+                    <div class="page-heading">
+                        <div>
+                            <p class="eyebrow">ПАНЕЛИ ИДОРАКУНӢ</p>
+                            <h1>Салом, <span id="greetingName">Дӯст!</span></h1>
+                            <p class="muted">Қаҳрамонат имрӯз чӣ ҳол дорад?</p>
+                        </div>
+                        <div class="level-badge">
+                            <span>LEVEL</span>
+                            <strong id="levelNumber">01</strong>
+                        </div>
+                    </div>
+
+                    <section class="hero-card">
+                        <div class="hero-copy">
+                            <span class="status-pill"><i></i> <span id="petStatus">ОМОДА</span></span>
+                            <p class="eyebrow">ҚАҲРАМОНИ ТУ</p>
+                            <h2 id="heroPetName">Картошка</h2>
+                            <p id="heroDescription">Қавӣ шав. Ҳар рӯз пеш рав.</p>
+                            <div class="hero-actions">
+                                <button class="btn btn-primary" data-action="play">⚡ БОЗӢ КУН</button>
+                                <button class="btn btn-outline" data-action="love">♥ ДӮСТӢ</button>
+                            </div>
+                        </div>
+
+                        <div class="character-stage">
+                            <div class="stage-ring ring-one"></div>
+                            <div class="stage-ring ring-two"></div>
+                            <div class="stage-light"></div>
+                            <div class="character-shadow"></div>
+                            <div id="potatoCharacter" class="potato-character">
+                                <div class="sprout">
+                                    <span class="leaf leaf-left"></span>
+                                    <span class="leaf leaf-right"></span>
+                                </div>
+                                <div class="potato-body">
+                                    <span class="skin-spot spot-a"></span>
+                                    <span class="skin-spot spot-b"></span>
+                                    <span class="skin-spot spot-c"></span>
+                                    <span class="brow brow-left"></span>
+                                    <span class="brow brow-right"></span>
+                                    <span class="eye eye-left"><i></i><b></b></span>
+                                    <span class="eye eye-right"><i></i><b></b></span>
+                                    <span class="cheek cheek-left"></span>
+                                    <span class="cheek cheek-right"></span>
+                                    <span class="mouth"><i></i></span>
+                                    <span class="muscle muscle-one"></span>
+                                    <span class="muscle muscle-two"></span>
+                                    <span class="abs abs-one"></span>
+                                    <span class="abs abs-two"></span>
+                                    <span class="abs abs-three"></span>
+                                </div>
+                                <span class="arm arm-left"><i></i></span>
+                                <span class="arm arm-right"><i></i></span>
+                                <span class="leg leg-left"></span>
+                                <span class="leg leg-right"></span>
+                                <span class="shorts"></span>
+                            </div>
+                            <div class="stage-floor"></div>
+                            <div id="floatingReaction" class="floating-reaction">Тайёрам! 💪</div>
+                        </div>
+
+                        <div class="hero-bottom">
+                            <span>✦ Ҳолати қаҳрамон</span>
+                            <span id="moodLabel">Хушҳол</span>
+                        </div>
+                    </section>
+
+                    <section class="stats-section">
+                        <div class="section-title">
+                            <div><p class="eyebrow">ҲОЛАТИ ҚАҲРАМОН</p><h2>Нишондиҳандаҳо</h2></div>
+                        </div>
+                        <div class="stat-grid">
+                            <article class="stat-card">
+                                <div class="stat-top"><span class="stat-icon orange">🍗</span><span class="muted">Ғизо</span></div>
+                                <div class="stat-number"><strong id="hungerValue">80%</strong><span>ИШТИҲО</span></div>
+                                <div class="progress-track"><div id="hungerBar" class="progress-fill orange-fill"></div></div>
+                            </article>
+                            <article class="stat-card">
+                                <div class="stat-top"><span class="stat-icon blue">⚡</span><span class="muted">Энергия</span></div>
+                                <div class="stat-number"><strong id="energyValue">80%</strong><span>ҚУВВА</span></div>
+                                <div class="progress-track"><div id="energyBar" class="progress-fill blue-fill"></div></div>
+                            </article>
+                            <article class="stat-card">
+                                <div class="stat-top"><span class="stat-icon pink">♥</span><span class="muted">Хушбахтӣ</span></div>
+                                <div class="stat-number"><strong id="happyValue">80%</strong><span>РУҲИЯ</span></div>
+                                <div class="progress-track"><div id="happyBar" class="progress-fill pink-fill"></div></div>
+                            </article>
+                            <article class="stat-card">
+                                <div class="stat-top"><span class="stat-icon green">✦</span><span class="muted">Тозагӣ</span></div>
+                                <div class="stat-number"><strong id="cleanValue">80%</strong><span>НИГОҲУБИН</span></div>
+                                <div class="progress-track"><div id="cleanBar" class="progress-fill green-fill"></div></div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="panel-section">
+                        <div class="section-title"><div><p class="eyebrow">АМАЛҲО</p><h2>Идоракунии қаҳрамон</h2></div></div>
+                        <div class="action-grid">
+                            <button class="action-card" data-action="feed"><span class="action-icon">🍗</span><strong>Ғизо додан</strong><small>Қувват гир</small></button>
+                            <button class="action-card" data-action="sleep"><span class="action-icon">☾</span><strong id="sleepActionName">Хоб кардан</strong><small>Энергия барқарор кун</small></button>
+                            <button class="action-card" data-action="wash"><span class="action-icon">♨</span><strong>Оббозӣ</strong><small>Тоза шав</small></button>
+                            <button class="action-card" data-action="dance"><span class="action-icon">♫</span><strong>Рақс кардан</strong><small>Рӯҳияро баланд кун</small></button>
+                            <button class="action-card" data-action="train"><span class="action-icon">🏋</span><strong>Машқ кардан</strong><small>Таҷриба гир</small></button>
+                            <button class="action-card" data-action="love"><span class="action-icon">♥</span><strong>Навозиш</strong><small>Дӯстӣ зиёд кун</small></button>
+                        </div>
+                    </section>
+                </section>
+
+                <section id="page-shop" class="page hidden">
+                    <div class="page-heading">
+                        <div><p class="eyebrow">МАҲСУЛОТ</p><h1>Мағоза</h1><p class="muted">Бо танга чизҳои заруриро харид кун.</p></div>
+                    </div>
+                    <div class="shop-balance">Тангаҳои ту: <strong id="shopCoins">0</strong> ◈</div>
+                    <div id="shopGrid" class="shop-grid"></div>
+                </section>
+
+                <section id="page-tasks" class="page hidden">
+                    <div class="page-heading"><div><p class="eyebrow">МУКОФОТҲО</p><h1>Вазифаҳо</h1><p class="muted">Ҳар вазифаро иҷро кун ва танга гир.</p></div></div>
+                    <div class="task-summary"><span>Пешрафти имрӯз</span><strong id="taskProgress">0 / 4</strong></div>
+                    <div class="progress-track task-progress"><div id="taskProgressBar" class="progress-fill green-fill"></div></div>
+                    <div id="taskList" class="task-list"></div>
+                </section>
+
+                <section id="page-stats" class="page hidden">
+                    <div class="page-heading"><div><p class="eyebrow">ПЕШРАФТ</p><h1>Натиҷаҳо</h1><p class="muted">Ҳамаи дастовардҳои қаҳрамони ту.</p></div></div>
+                    <div class="achievement-grid">
+                        <article class="achievement-card"><span>🏆</span><small>САТҲ</small><strong id="statsLevel">1</strong></article>
+                        <article class="achievement-card"><span>◈</span><small>ТАНГАҲО</small><strong id="statsCoins">0</strong></article>
+                        <article class="achievement-card"><span>⚡</span><small>ТАЧРИБА</small><strong id="statsXP">0</strong></article>
+                        <article class="achievement-card"><span>✓</span><small>ВАЗИФАҲО</small><strong id="statsTasks">0</strong></article>
+                    </div>
+                    <div class="panel-section">
+                        <div class="section-title"><div><p class="eyebrow">ШАХСӢ</p><h2>Номи қаҳрамон</h2></div></div>
+                        <div class="rename-row"><input id="nameInput" maxlength="18" placeholder="Номи нав"><button id="saveNameButton" class="btn btn-primary">Нигоҳ доштан</button></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <footer class="footer"><span>KB / КАРТОШКА БИРЁН</span><span>БО МЕҲР ТАРБИЯ КУН · <span id="footerLevel">LEVEL 01</span></span></footer>
+    </main>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-box">
+            <button id="closeModal" class="modal-x" aria-label="Пӯшидан">×</button>
+            <div id="modalIcon" class="modal-big-icon">⚙</div>
+            <p class="eyebrow">КАРТОШКА БИРЁН</p>
+            <h2 id="modalTitle">Танзимот</h2>
+            <p id="modalMessage" class="muted"></p>
+            <div id="modalContent"></div>
+            <button id="modalOk" class="btn btn-primary modal-ok">Фаҳмо</button>
+        </div>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+    <script src="script.js"></script>
+</body>
+</html>
