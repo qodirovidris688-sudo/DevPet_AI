@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d18">
+  <title>Картошка Бирён — Бозии ман</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Саҳифаи истиқбол -->
+  <section id="welcome" class="welcome">
+    <div class="welcome-card">
+      <div class="logo">KB<span>+</span></div>
+      <p class="eyebrow">ВИРТУАЛЬНЫЙ СПУТНИК</p>
+      <h1>КАРТОШКА<br><span>БИРЁН</span></h1>
+      <p class="welcome-text">
+        Қаҳрамони мушакдоратро нигоҳубин кун.
+        Бо ӯ гап зан, ғизо деҳ, машқ кун ва танга гир!
+      </p>
+      <div class="welcome-tags">
+        <span>💪 ҚАҲРАМОН</span>
+        <span>◈ ТАНГА</span>
+        <span>🎤 ГУФТУГӮ</span>
+      </div>
+      <button id="startBtn" class="btn primary full">
+        ОҒОЗИ БОЗӢ ↗
+      </button>
+      <small>Пешрафти ту дар браузер сабт мешавад.</small>
+    </div>
+  </section>
+
+  <!-- Бозии асосӣ -->
+  <main id="app" class="app hidden">
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-logo">KB</div>
+        <div>
+          <strong>КАРТОШКА <span>БИРЁН</span></strong>
+          <small>ҚАҲРАМОНИ ВИРТУАЛӢ</small>
+        </div>
+      </div>
+
+      <div class="top-right">
+        <div class="coin-box">🪙 <b id="coins">125</b></div>
+        <div class="level-box">
+          <small>LEVEL</small>
+          <b id="level">01</b>
+        </div>
+        <button id="settingsBtn" class="icon-btn" aria-label="Танзимот">⚙</button>
+      </div>
+    </header>
+
+    <div class="layout">
+
+      <!-- Менюи чап -->
+      <aside class="sidebar">
+        <p class="nav-title">МЕНЮ</p>
+        <button class="nav-btn active" data-page="home">⌂ <span>Асосӣ</span></button>
+        <button class="nav-btn" data-page="shop">🛒 <span>Мағоза</span></button>
+        <button class="nav-btn" data-page="tasks">☷ <span>Вазифаҳо</span></button>
+        <button class="nav-btn" data-page="stats">↗ <span>Натиҷаҳо</span></button>
+        <button class="nav-btn" data-page="chat">💬 <span>Гуфтугӯ</span></button>
+        <button class="nav-btn" data-page="code">⌨ <span>Муҳаррири код</span></button>
+
+        <div class="online">
+          <i></i>
+          <div><b>Онлайн</b><small>Картошка Бирён</small></div>
+        </div>
+      </aside>
+
+      <div class="content">
+
+        <!-- САҲИФАИ АСОСӢ -->
+        <section id="page-home" class="page">
+
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">ПАНЕЛИ ИДОРАКУНӢ</p>
+              <h2>Салом, <span id="playerName">Дӯст!</span></h2>
+              <p class="muted">Имрӯз қаҳрамонатро қавитар кун.</p>
+            </div>
+          </div>
+
+          <!-- Қаҳрамон -->
+          <section class="hero-card">
+            <div class="hero-info">
+              <span class="status"><i></i><b id="status">ОМОДА</b></span>
+              <p class="eyebrow">ҚАҲРАМОНИ ТУ</p>
+              <h1 id="petName">Картошка</h1>
+              <p id="petLine" class="muted">
+                Ман омодаам, ки қавитар шавам!
+              </p>
+
+              <div class="hero-buttons">
+                <button class="btn primary" data-action="play">⚡ БОЗӢ КУН</button>
+                <button class="btn secondary" data-action="love">♥ ДӮСТӢ</button>
+              </div>
+            </div>
+
+            <!-- Персонажи картошка бо CSS сохта мешавад -->
+            <div class="stage">
+              <div class="stage-glow"></div>
+              <div class="orbit orbit-one"></div>
+              <div class="orbit orbit-two"></div>
+
+              <div class="character-platform"></div>
+
+              <div id="pet" class="pet" title="Картошкаро пахш кун">
+
+                <div class="sprout">
+                  <i class="leaf leaf-one"></i>
+                  <i class="leaf leaf-two"></i>
+                  <b></b>
+                </div>
+
+                <div class="potato-body">
+                  <i class="skin-spot spot-one"></i>
+                  <i class="skin-spot spot-two"></i>
+                  <i class="skin-spot spot-three"></i>
+                  <i class="skin-spot spot-four"></i>
+                  <i class="skin-spot spot-five"></i>
+
+                  <i class="brow brow-left"></i>
+                  <i class="brow brow-right"></i>
+
+                  <i class="eye eye-left"><b></b><em></em></i>
+                  <i class="eye eye-right"><b></b><em></em></i>
+
+                  <i class="cheek cheek-left"></i>
+                  <i class="cheek cheek-right"></i>
+
+                  <i class="mouth"></i>
+                </div>
+
+                <!-- Дастҳои калон ва мушакдор -->
+                <div class="arm arm-left">
+                  <i class="bicep"></i>
+                  <i class="forearm"></i>
+                  <i class="glove"></i>
+                </div>
+
+                <div class="arm arm-right">
+                  <i class="bicep"></i>
+                  <i class="forearm"></i>
+                  <i class="glove"></i>
+                </div>
+
+                <!-- Либоси сиёҳи варзишӣ -->
+                <div class="shirt">
+                  <span class="shirt-logo">KB</span>
+                  <span class="shirt-name">BIRYON</span>
+                  <i class="shirt-line"></i>
+                  <i class="shirt-string string-one"></i>
+                  <i class="shirt-string string-two"></i>
+                </div>
+
+                <i class="wristband band-left"></i>
+                <i class="wristband band-right"></i>
+
+                <i class="leg leg-left"></i>
+                <i class="leg leg-right"></i>
+
+                <div class="shorts">
+                  <i></i><b></b>
+                </div>
+
+                <i class="shoe shoe-left"><b></b></i>
+                <i class="shoe shoe-right"><b></b></i>
+
+              </div>
+
+              <div id="reaction" class="reaction">
+                Ман гуруснаам! Ба ман хӯрок деҳ! 🍔
+              </div>
+            </div>
+
+            <div class="hero-footer">
+              <span>✦ ҲОЛАТИ ҚАҲРАМОН</span>
+              <b id="mood">Хушҳол</b>
+            </div>
+          </section>
+
+          <!-- Нишондиҳандаҳо -->
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">ҲОЛАТИ ҚАҲРАМОН</p>
+              <h3>Нишондиҳандаҳо</h3>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <div class="stat-top"><span class="stat-icon orange">🍗</span><b>Ғизо</b></div>
+              <div class="stat-number"><strong id="hungerText">65%</strong><small>ИШТИҲО</small></div>
+              <div class="progress"><i id="hungerBar" class="bar-orange"></i></div>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-top"><span class="stat-icon blue">⚡</span><b>Энергия</b></div>
+              <div class="stat-number"><strong id="energyText">75%</strong><small>ҚУВВА</small></div>
+              <div class="progress"><i id="energyBar" class="bar-blue"></i></div>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-top"><span class="stat-icon pink">♥</span><b>Хушбахтӣ</b></div>
+              <div class="stat-number"><strong id="happyText">80%</strong><small>РУҲИЯ</small></div>
+              <div class="progress"><i id="happyBar" class="bar-pink"></i></div>
+            </article>
+
+            <article class="stat-card">
+              <div class="stat-top"><span class="stat-icon green">✦</span><b>Тозагӣ</b></div>
+              <div class="stat-number"><strong id="cleanText">80%</strong><small>НИГОҲУБИН</small></div>
+              <div class="progress"><i id="cleanBar" class="bar-green"></i></div>
+            </article>
+          </div>
+
+          <!-- Тугмаҳои нигоҳубин -->
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">АМАЛҲО</p>
+              <h3>Қаҳрамонро идора кун</h3>
+            </div>
+          </div>
+
+          <div class="actions-grid">
+            <button class="action-card" data-action="feed">
+              <span>🍔</span><b>Ғизо додан</b><small>Ба ман хӯрок деҳ</small>
+            </button>
+
+            <button class="action-card" data-action="train">
+              <span>🏋️</span><b>Машқ кардан</b><small>Мушакҳоро калон кун</small>
+            </button>
+
+            <button class="action-card" data-action="dance">
+              <span>♫</span><b>Рақс кардан</b><small>Рӯҳияро баланд кун</small>
+            </button>
+
+            <button class="action-card" data-action="love">
+              <span>♥</span><b>Навозиш</b><small>Дӯстӣ зиёд кун</small>
+            </button>
+
+            <button class="action-card" data-action="wash">
+              <span>🚿</span><b>Оббозӣ</b><small>Тоза шав</small>
+            </button>
+
+            <button class="action-card" data-action="sleep">
+              <span>🌙</span><b id="sleepLabel">Хоб кардан</b><small>Энергия гир</small>
+            </button>
+          </div>
+
+          <!-- Гуфтугӯи кӯтоҳ -->
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">ГУФТУГӮ</p>
+              <h3>Бо ман гап зан</h3>
+            </div>
+          </div>
+
+          <div class="chat-preview">
+            <div class="chat-avatar">🥔</div>
+            <div class="chat-preview-content">
+              <b id="chatGreeting">Салом, дӯсти ман!</b>
+              <p class="muted">Маро пахш кун ё тугмаи микрофонро истифода бар.</p>
+            </div>
+            <button class="btn primary" data-page-link="chat">💬 ГУФТУГӮ</button>
+          </div>
+
+        </section>
+
+        <!-- МАҒОЗА -->
+        <section id="page-shop" class="page hidden">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">ХАРИД</p>
+              <h2>Мағоза</h2>
+              <p class="muted">Ба қаҳрамон хӯрок харид кун.</p>
+            </div>
+          </div>
+
+          <div class="balance">
+            <span>Тангаҳои ту: <b id="shopCoins">125</b> 🪙</span>
+            <span>Ғизои захирашуда: <b id="foodCount">2</b></span>
+          </div>
+
+          <div id="shopGrid" class="shop-grid"></div>
+        </section>
+
+        <!-- ВАЗИФАҲО -->
+        <section id="page-tasks" class="page hidden">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">МУКОФОТ</p>
+              <h2>Вазифаҳо</h2>
+              <p class="muted">Вазифаҳоро иҷро кун ва танга гир.</p>
+            </div>
+          </div>
+
+          <div class="balance">
+            <span>Пешрафти имрӯз</span>
+            <b id="taskCount">0 / 5</b>
+          </div>
+
+          <div class="progress task-progress"><i id="taskBar" class="bar-green"></i></div>
+          <div id="taskList" class="task-list"></div>
+        </section>
+
+        <!-- НАТИҶАҲО -->
+        <section id="page-stats" class="page hidden">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">ПЕШРАФТ</p>
+              <h2>Натиҷаҳо</h2>
+              <p class="muted">Ҳамаи пешрафти қаҳрамон.</p>
+            </div>
+          </div>
+
+          <div class="achievement-grid">
+            <article><span>🏆</span><small>САТҲ</small><b id="statLevel">1</b></article>
+            <article><span>🪙</span><small>ТАНГА</small><b id="statCoins">125</b></article>
+            <article><span>⚡</span><small>ТАҶРИБА</small><b id="statXP">0</b></article>
+            <article><span>✓</span><small>ВАЗИФАҲО</small><b id="statTasks">0</b></article>
+          </div>
+
+          <div class="section-heading"><h3>Номи қаҳрамон</h3></div>
+
+          <div class="rename-box">
+            <input id="nameInput" maxlength="18" placeholder="Номи қаҳрамонро навис">
+            <button id="saveName" class="btn primary">НИГОҲ ДОШТАН</button>
+          </div>
+
+          <div class="reset-box">
+            <div>
+              <b>Аз нав оғоз кардан</b>
+              <p class="muted">Пешрафти бозӣ аз нав мешавад.</p>
+            </div>
+            <button id="resetBtn" class="btn secondary">АЗ НАВ</button>
+          </div>
+        </section>
+
+        <!-- ГУФТУГӮ БО КАРТОШКА -->
+        <section id="page-chat" class="page hidden">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">ГУФТУГӮИ ҚАҲРАМОН</p>
+              <h2>Бо ман гап зан</h2>
+              <p class="muted">Савол навис ё бо микрофон гап зан.</p>
+            </div>
+          </div>
+
+          <div class="chat-panel">
+            <div class="chat-character">
+              <div class="mini-potato">🥔</div>
+              <div>
+                <b id="chatPetName">Картошка Бирён</b>
+                <small><i></i> Омодаи гуфтугӯ</small>
+              </div>
+            </div>
+
+            <div id="chatMessages" class="chat-messages" aria-live="polite">
+              <div class="message bot-message">
+                <b>Картошка Бирён</b>
+                <p>Салом, дӯсти ман! Ман гуруснаам. Ба ман бургер деҳ! 🍔</p>
+                <button class="speak-message" data-speak="Салом, дӯсти ман! Ман гуруснаам. Ба ман бургер деҳ!">🔊 Гӯш кардан</button>
+              </div>
+            </div>
+
+            <div class="chat-controls">
+              <input id="chatInput" type="text" maxlength="300" placeholder="Ба картошка чизе навис...">
+              <button id="sendChat" class="btn primary">ФИРИСТОДАН</button>
+            </div>
+
+            <div class="voice-controls">
+              <button id="talkBtn" class="btn primary">🎤 БО МАН ГАП ЗАН</button>
+              <button id="stopVoice" class="btn secondary">🔇 ҚАТЪ КАРДАН</button>
+            </div>
+
+            <p id="voiceStatus" class="muted voice-status">
+              Барои гуфтугӯи овозӣ ба микрофон иҷозат деҳ.
+            </p>
+          </div>
+        </section>
+
+        <!-- МУҲАРРИРИ КОД -->
+        <section id="page-code" class="page hidden">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">ҶОЙИ НАВИШТАНИ КОД</p>
+              <h2>Муҳаррири код</h2>
+              <p class="muted">HTML, CSS ва JavaScript навис ва натиҷаро бин.</p>
+            </div>
+          </div>
+
+          <div class="editor-toolbar">
+            <label for="codeLanguage">Забони код:</label>
+            <select id="codeLanguage">
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="javascript">JavaScript</option>
+            </select>
+            <button id="runCode" class="btn primary">▶ ИҶРО КАРДАН</button>
+            <button id="saveCode" class="btn secondary">💾 САБТ</button>
+            <button id="clearCode" class="btn secondary">ТOЗА КАРДАН</button>
+          </div>
+
+          <textarea
+            id="codeEditor"
+            class="code-editor"
+            spellcheck="false"
+            autocapitalize="off"
+            autocomplete="off"
+            placeholder="Коди худро дар ин ҷо навис..."
+          ></textarea>
+
+          <div class="section-heading">
+            <h3>Натиҷаи код</h3>
+          </div>
+
+          <iframe
+            id="codeOutput"
+            class="code-output"
+            title="Натиҷаи иҷрои код"
+            sandbox="allow-scripts"
+          ></iframe>
+
+          <p class="muted editor-note">
+            Код дар ҳамин браузер сабт мешавад. Кодҳои HTML-и ношиносро
+            танҳо дар муҳити маҳаллӣ иҷро кун.
+          </p>
+        </section>
+
+      </div>
+    </div>
+
+    <footer>
+      <span>KB / КАРТОШКА БИРЁН</span>
+      <span>LEVEL <b id="footerLevel">01</b> · ПЕШРАФТИ ТУ</span>
+    </footer>
+
+  </main>
+
+  <!-- Равзанаи паёмҳо -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <button id="modalClose" class="modal-close" aria-label="Пӯшидан">×</button>
+      <div id="modalIcon" class="modal-icon">⚙</div>
+      <p class="eyebrow">КАРТОШКА БИРЁН</p>
+      <h2 id="modalTitle">Танзимот</h2>
+      <p id="modalText" class="muted"></p>
+      <div id="modalExtra" class="modal-extra"></div>
+      <button id="modalOk" class="btn primary full">ФАҲМО</button>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

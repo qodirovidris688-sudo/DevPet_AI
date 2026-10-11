@@ -1,0 +1,1922 @@
+
+/* =========================================
+   КАРТОШКА БИРЁН — CSS ВЕРСИЯИ НАВ
+   ДИЗАЙНИ МАРДОНА, ТОРИК ВА ВАРЗИШӢ
+   ========================================= */
+
+:root {
+  --bg: #080d16;
+  --panel: #111a28;
+  --panel2: #172338;
+  --border: #293a52;
+  --text: #f4f7fc;
+  --muted: #91a0b6;
+  --blue: #4e91ff;
+  --blue2: #2760ce;
+  --green: #42dba0;
+  --orange: #ffb65f;
+  --pink: #ff80ad;
+  --gold: #ffd16a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--text);
+  background:
+    radial-gradient(ellipse at 85% 0%, #1c3151 0, transparent 35%),
+    radial-gradient(ellipse at 0% 100%, #152544 0, transparent 32%),
+    var(--bg);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* =========================================
+   САҲИФАИ ИСТИҚБОЛ
+   ========================================= */
+
+.welcome {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+  background:
+    radial-gradient(circle at 50% 25%, #1c3355, transparent 55%);
+}
+
+.welcome-card {
+  width: min(100%, 490px);
+  padding: 40px 32px;
+  text-align: center;
+  border: 1px solid #344258;
+  border-radius: 23px;
+  background: #111a28ee;
+  box-shadow: 0 30px 100px #0008;
+}
+
+.logo {
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 22px;
+  border: 1px solid #497fc7;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #549bff, #234b99);
+  box-shadow: 0 10px 35px #317cff30;
+  color: white;
+  font-size: 22px;
+  font-weight: 1000;
+}
+
+.logo span {
+  color: #9effc8;
+}
+
+.eyebrow {
+  color: #83b5ff;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.6px;
+  line-height: 1.8;
+}
+
+.welcome-card h1 {
+  margin: 16px 0;
+  font-size: clamp(37px, 8vw, 57px);
+  line-height: .98;
+  letter-spacing: -2px;
+}
+
+.welcome-card h1 span {
+  color: var(--blue);
+}
+
+.welcome-text {
+  max-width: 360px;
+  margin: 0 auto;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.welcome-tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 23px 0;
+}
+
+.welcome-tags span {
+  padding: 9px 11px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #ffffff04;
+  color: #d1def0;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.welcome-card > small {
+  display: block;
+  margin-top: 16px;
+  color: #8393aa;
+  font-size: 11px;
+}
+
+/* =========================================
+   ТУГМАҲО
+   ========================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 11px 15px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .35px;
+  transition:
+    transform .2s ease,
+    filter .2s ease,
+    border-color .2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.12);
+}
+
+.btn:active {
+  transform: scale(.98);
+}
+
+.primary {
+  background: linear-gradient(135deg, #559bff, #3266d8);
+  color: white;
+  box-shadow: 0 7px 20px #3175ff20;
+}
+
+.secondary {
+  border-color: #34445a;
+  background: #ffffff06;
+  color: #dce6f5;
+}
+
+.full {
+  width: 100%;
+  min-height: 46px;
+}
+
+/* =========================================
+   САРИ САЙТ
+   ========================================= */
+
+.app {
+  width: min(1450px, 100%);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.topbar {
+  min-height: 77px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 12px;
+  letter-spacing: .5px;
+}
+
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #315486;
+  border-radius: 12px;
+  background: #182b48;
+  color: #9ac4ff;
+  font-weight: 1000;
+}
+
+.brand strong span {
+  color: #80b4ff;
+}
+
+.brand small {
+  display: block;
+  margin-top: 4px;
+  color: #8291a8;
+  font-size: 8px;
+  letter-spacing: 1.2px;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.coin-box {
+  padding: 10px 13px;
+  border: 1px solid #65532e;
+  border-radius: 9px;
+  background: #272115;
+  color: var(--gold);
+  font-weight: 900;
+}
+
+.level-box {
+  min-width: 53px;
+  padding: 6px 8px;
+  border: 1px solid #294b75;
+  border-radius: 9px;
+  background: #14243a;
+  text-align: center;
+}
+
+.level-box small {
+  display: block;
+  color: #8ba6ca;
+  font-size: 8px;
+}
+
+.level-box b {
+  display: block;
+  margin-top: 2px;
+  color: #8bbaff;
+  font-size: 19px;
+}
+
+.icon-btn {
+  width: 39px;
+  height: 39px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+  font-size: 18px;
+}
+
+/* =========================================
+   МЕНЮ ВА САҲИФАҲО
+   ========================================= */
+
+.layout {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 23px;
+  padding: 26px 0 38px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 15px;
+  align-self: start;
+  min-height: 490px;
+  padding: 14px 10px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: linear-gradient(160deg, #131d2c, #0e1521);
+}
+
+.nav-title {
+  padding: 7px 10px 15px;
+  color: #718199;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.nav-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 13px 11px;
+  margin-bottom: 5px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: #9aa8bb;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  transition: .2s;
+}
+
+.nav-btn:hover {
+  border-color: #30435f;
+  background: #ffffff08;
+  color: white;
+}
+
+.nav-btn.active {
+  border-color: #29466d;
+  background: linear-gradient(110deg, #1d3453, #17263d);
+  color: #8bbaff;
+}
+
+.online {
+  position: absolute;
+  bottom: 17px;
+  left: 17px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #b6c5d8;
+  font-size: 10px;
+}
+
+.online > i,
+.status > i,
+.chat-character small i {
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 9px #4bdda080;
+}
+
+.online small {
+  display: block;
+  margin-top: 4px;
+  color: #718096;
+  font-size: 9px;
+}
+
+.content {
+  min-width: 0;
+}
+
+.page-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 4px 0 22px;
+}
+
+.page-heading h2 {
+  margin: 7px 0;
+  font-size: clamp(25px, 3vw, 34px);
+  letter-spacing: -.7px;
+}
+
+.page-heading h2 span {
+  color: #8bb9ff;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   САҲНАИ ҚАҲРАМОН
+   ========================================= */
+
+.hero-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  grid-template-rows: minmax(340px, 1fr) 42px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  border: 1px solid #2a374b;
+  border-radius: 16px;
+  background:
+    radial-gradient(ellipse at 75% 50%, #1b2b43, transparent 45%),
+    linear-gradient(120deg, #171e2a, #101725 60%, #14223a);
+}
+
+.hero-info {
+  z-index: 5;
+  padding: 28px 0 20px 24px;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 9px;
+  border: 1px solid #285d4a;
+  border-radius: 7px;
+  background: #153428;
+  color: #65e7ae;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.hero-info > .eyebrow {
+  margin-top: 22px;
+}
+
+.hero-info h1 {
+  margin: 8px 0;
+  font-size: clamp(29px, 4vw, 43px);
+  letter-spacing: -1px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 340px;
+  overflow: hidden;
+  perspective: 900px;
+  background:
+    radial-gradient(ellipse at 50% 54%, #344c70 0, #1c2e48 36%, transparent 73%);
+}
+
+.stage-glow {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: #4e95ff20;
+  filter: blur(32px);
+}
+
+.orbit {
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  border: 1px solid #7299d91c;
+  border-radius: 50%;
+}
+
+.orbit-two {
+  width: 215px;
+  height: 215px;
+  border-style: dashed;
+  animation: orbitSpin 45s linear infinite;
+}
+
+@keyframes orbitSpin {
+  to { transform: rotate(360deg); }
+}
+
+.character-platform {
+  position: absolute;
+  bottom: 26px;
+  width: 86%;
+  height: 14px;
+  border: 1px solid #586b87;
+  border-radius: 50%;
+  background: linear-gradient(#6d7a8e, #1c2739 65%);
+  box-shadow: 0 8px 20px #0009;
+}
+
+/* =========================================
+   ПЕРСОНАЖ
+   ========================================= */
+
+.pet {
+  position: relative;
+  z-index: 2;
+  width: 240px;
+  height: 300px;
+  transform-style: preserve-3d;
+  animation: petFloat 3.5s ease-in-out infinite;
+  cursor: pointer;
+  transition: filter .2s;
+}
+
+.pet:hover {
+  filter: brightness(1.07);
+}
+
+@keyframes petFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-1deg);
+  }
+
+  50% {
+    transform: translateY(-7px) rotate(1deg);
+  }
+}
+
+/* Барги рӯйи картошка */
+
+.sprout {
+  position: absolute;
+  z-index: 7;
+  top: 5px;
+  left: 111px;
+  width: 32px;
+  height: 37px;
+}
+
+.sprout::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 15px;
+  width: 5px;
+  height: 27px;
+  border-radius: 5px;
+  background: linear-gradient(#7eaf43, #326b36);
+  transform: rotate(6deg);
+}
+
+.leaf {
+  position: absolute;
+  width: 21px;
+  height: 13px;
+  border: 1px solid #426e2d;
+  border-radius: 100% 0 100% 0;
+  background: linear-gradient(135deg, #d1ef74, #5d9b3c 60%, #286b32);
+  box-shadow: inset 1px 1px 2px #ffffff55;
+}
+
+.leaf-one {
+  top: 2px;
+  left: -3px;
+  transform: rotate(18deg);
+}
+
+.leaf-two {
+  top: -3px;
+  right: -7px;
+  transform: rotate(62deg);
+}
+
+/* Бадани картошка — сиёҳтоб */
+
+.potato-body {
+  position: absolute;
+  z-index: 3;
+  left: 42px;
+  top: 30px;
+  width: 156px;
+  height: 181px;
+  overflow: hidden;
+  border: 1px solid #d8c8a03b;
+  border-radius: 47% 49% 42% 43% / 39% 39% 57% 57%;
+  background:
+    radial-gradient(ellipse at 29% 18%, #d8d4c1 0%, transparent 22%),
+    radial-gradient(ellipse at 35% 26%, #aaa58e 0%, #817b68 45%, #514d43 76%, #292b2a 100%);
+  box-shadow:
+    inset 8px 7px 16px #f4e8c64a,
+    inset -15px -16px 25px #07090b88,
+    0 19px 33px #0009;
+}
+
+.potato-body::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(105deg, #ffffff12, transparent 38%, #00000021 80%);
+  pointer-events: none;
+}
+
+.skin-spot {
+  position: absolute;
+  z-index: 1;
+  width: 6px;
+  height: 5px;
+  border-radius: 50%;
+  background: #39362d;
+  opacity: .6;
+}
+
+.spot-one { top: 27px; right: 23px; }
+.spot-two { top: 78px; left: 16px; }
+.spot-three { bottom: 25px; right: 29px; }
+.spot-four { top: 20px; left: 24px; }
+.spot-five { top: 117px; left: 40px; }
+
+/* Чашм ва абрӯ */
+
+.brow {
+  position: absolute;
+  z-index: 3;
+  top: 49px;
+  width: 26px;
+  height: 7px;
+  border-top: 4px solid #302b24;
+  border-radius: 50%;
+}
+
+.brow-left {
+  left: 35px;
+  transform: rotate(-9deg);
+}
+
+.brow-right {
+  right: 35px;
+  transform: rotate(9deg);
+}
+
+.eye {
+  position: absolute;
+  z-index: 3;
+  top: 60px;
+  width: 28px;
+  height: 35px;
+  border: 1px solid #696353;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #fffef5, #d8d6c8);
+  box-shadow: inset 1px 2px 4px #fff;
+}
+
+.eye-left { left: 37px; }
+.eye-right { right: 37px; }
+
+.eye b {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 15px;
+  height: 23px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 25%, #8e8b7e, #282723 72%);
+}
+
+.eye em {
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  left: 10px;
+  width: 5px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.cheek {
+  position: absolute;
+  z-index: 2;
+  top: 101px;
+  width: 22px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ba7771;
+  opacity: .34;
+  filter: blur(3px);
+}
+
+.cheek-left { left: 15px; }
+.cheek-right { right: 15px; }
+
+.mouth {
+  position: absolute;
+  z-index: 3;
+  top: 111px;
+  left: 64px;
+  width: 28px;
+  height: 13px;
+  border-bottom: 4px solid #493024;
+  border-radius: 0 0 50% 50%;
+}
+
+/* =========================================
+   ДАСТҲОИ МУШАКДОР
+   ========================================= */
+
+.arm {
+  position: absolute;
+  z-index: 4;
+  top: 96px;
+  width: 48px;
+  height: 92px;
+  transform-origin: 50% 15%;
+}
+
+.arm-left {
+  left: 7px;
+  transform: rotate(23deg);
+}
+
+.arm-right {
+  right: 7px;
+  transform: rotate(-23deg);
+}
+
+.bicep {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 46px;
+  border-radius: 47% 47% 42% 42%;
+  background:
+    radial-gradient(ellipse at 30% 22%, #ded4b7, transparent 35%),
+    linear-gradient(90deg, #5c5749, #c0b69a 35%, #938873 70%, #4a463b);
+  box-shadow:
+    inset 3px 3px 6px #ffffff38,
+    inset -5px -4px 7px #00000045;
+}
+
+.bicep::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  width: 25px;
+  height: 20px;
+  border-radius: 50%;
+  border-top: 2px solid #e9dfc66b;
+  transform: rotate(-12deg);
+}
+
+.forearm {
+  position: absolute;
+  top: 32px;
+  left: 8px;
+  width: 34px;
+  height: 54px;
+  border-radius: 17px 17px 19px 19px;
+  background: linear-gradient(90deg, #5a5447, #bdb295 35%, #948a72 72%, #484337);
+  box-shadow: inset 3px 2px 5px #ffffff35, inset -4px -4px 7px #0005;
+}
+
+.glove {
+  position: absolute;
+  bottom: -1px;
+  left: 7px;
+  width: 35px;
+  height: 23px;
+  border: 1px solid #8d9cb2;
+  border-radius: 8px;
+  background: linear-gradient(145deg, #26364d, #080d16);
+  box-shadow: inset 0 2px 4px #ffffff1b;
+}
+
+/* =========================================
+   ЛИБОСИ СИЁҲИ ВАРЗИШӢ
+   ========================================= */
+
+.shirt {
+  position: absolute;
+  z-index: 6;
+  left: 48px;
+  top: 166px;
+  width: 145px;
+  height: 68px;
+  overflow: hidden;
+  border: 1px solid #3e495a;
+  border-radius: 15px 15px 25px 25px;
+  background: linear-gradient(135deg, #313947, #0d121c 48%, #05070b);
+  box-shadow:
+    inset 0 4px 8px #ffffff14,
+    inset 0 -9px 14px #0009,
+    0 7px 10px #0005;
+}
+
+.shirt::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 49px;
+  width: 45px;
+  height: 17px;
+  border-bottom: 3px solid #69778c;
+  border-radius: 0 0 15px 15px;
+  background: #151c29;
+}
+
+.shirt-logo {
+  position: absolute;
+  top: 22px;
+  left: 15px;
+  color: #8abaff;
+  font-size: 19px;
+  font-weight: 1000;
+}
+
+.shirt-name {
+  position: absolute;
+  top: 27px;
+  right: 11px;
+  color: #f1f5fc;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.shirt-line {
+  position: absolute;
+  top: 15px;
+  left: 68px;
+  width: 2px;
+  height: 34px;
+  background: #3c4657;
+  transform: rotate(35deg);
+  opacity: .65;
+}
+
+.shirt-string {
+  position: absolute;
+  top: 5px;
+  width: 3px;
+  height: 15px;
+  border-radius: 4px;
+  background: #d9e0e9;
+}
+
+.string-one { left: 60px; }
+.string-two { left: 70px; }
+
+.wristband {
+  position: absolute;
+  z-index: 7;
+  top: 177px;
+  width: 34px;
+  height: 13px;
+  border: 1px solid #718096;
+  border-radius: 5px;
+  background: linear-gradient(#344054, #090d15);
+}
+
+.band-left {
+  left: 10px;
+  transform: rotate(23deg);
+}
+
+.band-right {
+  right: 10px;
+  transform: rotate(-23deg);
+}
+
+/* =========================================
+   ПОЙҲО, ШОРТ ВА КРОССОВКА
+   ========================================= */
+
+.leg {
+  position: absolute;
+  z-index: 2;
+  bottom: 24px;
+  width: 40px;
+  height: 45px;
+  border-radius: 18px 18px 12px 12px;
+  background: linear-gradient(90deg, #595345, #c0b69b 36%, #8c826b 75%, #494338);
+}
+
+.leg-left {
+  left: 66px;
+  transform: rotate(6deg);
+}
+
+.leg-right {
+  right: 66px;
+  transform: rotate(-6deg);
+}
+
+.shorts {
+  position: absolute;
+  z-index: 7;
+  left: 48px;
+  bottom: 28px;
+  width: 145px;
+  height: 42px;
+  overflow: hidden;
+  border: 1px solid #485468;
+  border-radius: 7px 7px 18px 18px;
+  background: linear-gradient(120deg, #30394a, #090d15 55%, #242e3e);
+  clip-path: polygon(0 0, 100% 0, 91% 100%, 57% 100%, 50% 50%, 43% 100%, 9% 100%);
+}
+
+.shorts i {
+  position: absolute;
+  top: 6px;
+  right: 14px;
+  width: 3px;
+  height: 28px;
+  background: #8cbaff;
+  box-shadow: -6px 0 #e3e9f2;
+}
+
+.shorts b {
+  position: absolute;
+  top: 1px;
+  left: 69px;
+  width: 3px;
+  height: 13px;
+  background: #e3e8f1;
+  box-shadow: 7px 0 #e3e8f1;
+}
+
+.shoe {
+  position: absolute;
+  z-index: 8;
+  bottom: 2px;
+  width: 51px;
+  height: 24px;
+  border: 2px solid #b8c5d8;
+  border-radius: 13px 13px 7px 7px;
+  background: linear-gradient(145deg, #f6f7fa, #9eabc0);
+  box-shadow: inset 0 -5px 0 #273247, 0 5px 7px #0005;
+}
+
+.shoe-left {
+  left: 48px;
+  transform: rotate(-8deg);
+}
+
+.shoe-right {
+  right: 48px;
+  transform: rotate(8deg);
+}
+
+.shoe::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  width: 25px;
+  height: 2px;
+  background: #202b3d;
+  transform: rotate(-10deg);
+  box-shadow: 0 4px #202b3d;
+}
+
+.shoe b {
+  position: absolute;
+  right: 4px;
+  bottom: 3px;
+  width: 10px;
+  height: 4px;
+  border-radius: 4px;
+  background: #4b8dff;
+}
+
+/* =========================================
+   РЕАКСИЯ ВА ПОЁНИ ҚАҲРАМОН
+   ========================================= */
+
+.reaction {
+  position: absolute;
+  z-index: 10;
+  top: 13px;
+  right: 12px;
+  max-width: 190px;
+  padding: 9px 12px;
+  border: 1px solid #ffffff1b;
+  border-radius: 9px;
+  background: #101722e8;
+  color: #e0eafa;
+  font-size: 10px;
+  line-height: 1.6;
+  box-shadow: 0 5px 20px #0003;
+}
+
+.hero-footer {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-top: 1px solid #ffffff0b;
+  background: #0b1019b8;
+  color: #8694a9;
+  font-size: 10px;
+}
+
+.hero-footer b {
+  color: #70e1ac;
+}
+
+/* =========================================
+   НИШОНДИҲАНДАҲО
+   ========================================= */
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0 14px;
+}
+
+.section-heading h3 {
+  margin-top: 4px;
+  font-size: 18px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 11px;
+  margin-bottom: 26px;
+}
+
+.stat-card {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: linear-gradient(145deg, #151f2f, #101722);
+}
+
+.stat-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.stat-icon {
+  width: 31px;
+  height: 31px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  font-size: 15px;
+}
+
+.orange { background: #39291c; color: var(--orange); }
+.blue { background: #1b2b43; color: #79b2ff; }
+.pink { background: #382131; color: var(--pink); }
+.green { background: #18352b; color: var(--green); }
+
+.stat-number {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px;
+  margin: 15px 0 10px;
+}
+
+.stat-number strong {
+  font-size: 22px;
+}
+
+.stat-number small {
+  color: #718096;
+  font-size: 7px;
+}
+
+.progress {
+  height: 5px;
+  overflow: hidden;
+  border-radius: 9px;
+  background: #252d3b;
+}
+
+.progress i {
+  display: block;
+  width: 80%;
+  height: 100%;
+  border-radius: inherit;
+  transition: width .25s ease;
+}
+
+.bar-orange { background: linear-gradient(90deg, #ff9e4d, #ffd084); }
+.bar-blue { background: linear-gradient(90deg, #377dff, #75b6ff); }
+.bar-pink { background: linear-gradient(90deg, #d84f92, #ff9fc3); }
+.bar-green { background: linear-gradient(90deg, #2ca879, #6de4b1); }
+
+/* =========================================
+   АМАЛҲОИ БОЗӢ
+   ========================================= */
+
+.actions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 11px;
+}
+
+.action-card {
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: linear-gradient(145deg, #151e2d, #10151e);
+  text-align: left;
+  transition: transform .2s, border-color .2s, background .2s;
+}
+
+.action-card:hover {
+  transform: translateY(-3px);
+  border-color: #3e6497;
+  background: #182338;
+}
+
+.action-card > span {
+  width: 37px;
+  height: 37px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: #20314a;
+  font-size: 20px;
+}
+
+.action-card b { font-size: 12px; }
+.action-card small { color: var(--muted); font-size: 10px; }
+
+/* =========================================
+   ГУФТУГӮ
+   ========================================= */
+
+.chat-preview {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 17px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: linear-gradient(135deg, #152236, #111824);
+}
+
+.chat-avatar {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #4a6285;
+  border-radius: 14px;
+  background: #223652;
+  font-size: 26px;
+}
+
+.chat-preview-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.chat-preview-content b {
+  font-size: 12px;
+}
+
+.chat-preview-content p {
+  margin-top: 5px;
+}
+
+/* Саҳифаи гуфтугӯ */
+
+.chat-panel {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--panel);
+}
+
+.chat-character {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  background: #162235;
+}
+
+.mini-potato {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #4b5d78;
+  border-radius: 13px;
+  background: #26344a;
+  font-size: 25px;
+}
+
+.chat-character b {
+  display: block;
+  font-size: 12px;
+}
+
+.chat-character small {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 5px;
+  color: var(--green);
+  font-size: 10px;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 280px;
+  max-height: 440px;
+  overflow-y: auto;
+  padding: 18px;
+  background:
+    radial-gradient(ellipse at 0 0, #1b2a421f, transparent 60%);
+}
+
+.message {
+  max-width: 88%;
+  padding: 13px 14px;
+  border: 1px solid #2d4059;
+  border-radius: 12px;
+  background: #192538;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.message b {
+  display: block;
+  margin-bottom: 5px;
+  color: #91bdff;
+  font-size: 10px;
+}
+
+.message p {
+  color: #e2e9f5;
+  font-size: 12px;
+  white-space: pre-wrap;
+}
+
+.bot-message {
+  align-self: flex-start;
+  border-top-left-radius: 3px;
+}
+
+.user-message {
+  align-self: flex-end;
+  border-color: #315c96;
+  background: #1c3453;
+  border-top-right-radius: 3px;
+}
+
+.user-message b {
+  color: #a8ceff;
+}
+
+.speak-message {
+  padding: 5px 0 0;
+  margin-top: 5px;
+  border: 0;
+  background: transparent;
+  color: #9abfff;
+  font-size: 10px;
+}
+
+.chat-controls {
+  display: flex;
+  gap: 9px;
+  padding: 13px;
+  border-top: 1px solid var(--border);
+}
+
+.chat-controls input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #34445a;
+  border-radius: 9px;
+  background: #0b111c;
+  color: white;
+}
+
+.voice-controls {
+  display: flex;
+  gap: 9px;
+  padding: 0 13px 13px;
+}
+
+.voice-controls button {
+  flex: 1;
+}
+
+.voice-status {
+  padding: 0 15px 15px;
+  font-size: 11px;
+}
+
+/* =========================================
+   МАҒОЗА
+   ========================================= */
+
+.balance {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px 17px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel);
+  color: var(--muted);
+}
+
+.balance b { color: var(--gold); }
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.shop-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 17px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: linear-gradient(145deg, #151f2f, #101722);
+  transition: border-color .2s, transform .2s;
+}
+
+.shop-item:hover {
+  transform: translateY(-2px);
+  border-color: #3c5678;
+}
+
+.product-icon { font-size: 35px; }
+.shop-item h3 { font-size: 14px; }
+.shop-item p { flex: 1; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.price { color: var(--gold); font-weight: 800; font-size: 12px; }
+.shop-item button { width: 100%; }
+
+/* =========================================
+   ВАЗИФАҲО
+   ========================================= */
+
+.task-progress {
+  height: 7px;
+  margin-bottom: 16px;
+}
+
+.task-list {
+  display: grid;
+  gap: 10px;
+}
+
+.task-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: var(--panel);
+}
+
+.task-emoji {
+  width: 41px;
+  height: 41px;
+  display: grid;
+  flex: 0 0 41px;
+  place-items: center;
+  border-radius: 10px;
+  background: #202b3b;
+  font-size: 21px;
+}
+
+.task-copy { flex: 1; min-width: 0; }
+.task-copy b { font-size: 12px; }
+.task-copy small { display: block; margin-top: 5px; color: var(--muted); font-size: 10px; line-height: 1.6; }
+.task-reward { color: var(--gold); font-size: 11px; white-space: nowrap; }
+.task-check { color: var(--green); font-size: 18px; }
+
+/* =========================================
+   НАТИҶАҲО
+   ========================================= */
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 11px;
+  margin-bottom: 26px;
+}
+
+.achievement-grid article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: var(--panel);
+}
+
+.achievement-grid article span {
+  color: #82b5ff;
+  font-size: 25px;
+}
+
+.achievement-grid small {
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+
+.achievement-grid b { font-size: 25px; }
+
+.rename-box {
+  display: flex;
+  gap: 10px;
+}
+
+.rename-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: #0d121b;
+  color: white;
+}
+
+.reset-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 30px;
+  padding: 17px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: var(--panel);
+}
+
+/* =========================================
+   МУҲАРРИРИ КОД
+   ========================================= */
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: 12px 12px 0 0;
+  background: #172337;
+}
+
+.editor-toolbar label {
+  color: #b8c7dd;
+  font-size: 11px;
+}
+
+.editor-toolbar select {
+  min-height: 37px;
+  padding: 8px 10px;
+  border: 1px solid #3a4c65;
+  border-radius: 7px;
+  background: #0d1522;
+  color: white;
+}
+
+.code-editor {
+  display: block;
+  width: 100%;
+  min-height: 340px;
+  resize: vertical;
+  padding: 17px;
+  border: 1px solid var(--border);
+  border-top: 0;
+  border-radius: 0 0 12px 12px;
+  background: #090e17;
+  color: #c4e0ff;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.75;
+  tab-size: 2;
+  white-space: pre;
+  overflow: auto;
+}
+
+.code-editor::placeholder {
+  color: #64748b;
+}
+
+.code-output {
+  display: block;
+  width: 100%;
+  min-height: 240px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: white;
+}
+
+.editor-note {
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+/* =========================================
+   ПОЁНИ САЙТ
+   ========================================= */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 19px 0 26px;
+  border-top: 1px solid var(--border);
+  color: #718096;
+  font-size: 9px;
+  letter-spacing: .7px;
+}
+
+/* =========================================
+   РАВЗАНАИ ПАЁМ
+   ========================================= */
+
+.modal {
+  position: fixed;
+  z-index: 50;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: #05080ddd;
+  backdrop-filter: blur(8px);
+}
+
+.modal-card {
+  position: relative;
+  width: min(100%, 410px);
+  padding: 27px;
+  border: 1px solid #303b4d;
+  border-radius: 16px;
+  background: #141b27;
+  box-shadow: 0 30px 100px #0009;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 31px;
+  height: 31px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #ffffff08;
+  font-size: 21px;
+}
+
+.modal-icon { margin-bottom: 12px; font-size: 35px; }
+.modal-card h2 { margin: 7px 0 10px; font-size: 23px; }
+.modal-card > .muted { margin-bottom: 17px; }
+.modal-card > .full { margin-top: 17px; }
+.modal-extra { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+
+/* Паёми поёни экран */
+
+.toast {
+  position: fixed;
+  z-index: 80;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: calc(100% - 24px);
+  padding: 13px 17px;
+  border: 1px solid #33455f;
+  border-radius: 10px;
+  background: #18263a;
+  box-shadow: 0 10px 35px #0007;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* =========================================
+   ҲАРАКАТИ ҚАҲРАМОН
+   ========================================= */
+
+.pet.jumping {
+  animation: petJump .65s ease;
+}
+
+.pet.dancing {
+  animation: petDance .3s ease-in-out infinite alternate;
+}
+
+.pet.training {
+  animation: petTrain .35s ease-in-out infinite alternate;
+}
+
+.pet.sleeping {
+  animation: petSleep 2.5s ease-in-out infinite;
+}
+
+.pet.sleeping .eye {
+  top: 76px;
+  height: 4px;
+  border: 0;
+  background: #40362b;
+}
+
+.pet.sleeping .eye b,
+.pet.sleeping .eye em {
+  display: none;
+}
+
+.pet.sleeping .mouth {
+  height: 5px;
+  border-bottom-width: 2px;
+}
+
+@keyframes petJump {
+  0%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-32px) rotate(-5deg); }
+  70% { transform: translateY(-12px) rotate(4deg); }
+}
+
+@keyframes petDance {
+  from { transform: rotate(-8deg) translateY(-2px); }
+  to { transform: rotate(8deg) translateY(-8px); }
+}
+
+@keyframes petTrain {
+  from { transform: rotate(-3deg) translateY(0); }
+  to { transform: rotate(3deg) translateY(-5px); }
+}
+
+@keyframes petSleep {
+  0%, 100% { transform: translateY(0) rotate(-2deg) scaleY(.98); }
+  50% { transform: translateY(3px) rotate(2deg) scaleY(.97); }
+}
+
+/* =========================================
+   ЭКРАНИ МИЁНА
+   ========================================= */
+
+@media (max-width: 1100px) {
+  .app {
+    padding: 0 20px;
+  }
+
+  .layout {
+    grid-template-columns: 165px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .shop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .achievement-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-card {
+    grid-template-columns: .9fr 1.1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .app {
+    padding: 0 12px;
+  }
+
+  .topbar {
+    min-height: 67px;
+  }
+
+  .brand {
+    font-size: 10px;
+  }
+
+  .brand-logo {
+    width: 37px;
+    height: 37px;
+  }
+
+  .layout {
+    display: block;
+    padding-top: 15px;
+  }
+
+  .sidebar {
+    position: static;
+    display: flex;
+    gap: 4px;
+    min-height: 0;
+    overflow-x: auto;
+    padding: 7px;
+    margin-bottom: 17px;
+  }
+
+  .nav-title,
+  .online {
+    display: none;
+  }
+
+  .nav-btn {
+    flex: 0 0 auto;
+    width: auto;
+    justify-content: center;
+    white-space: nowrap;
+    padding: 10px 9px;
+    margin: 0;
+    font-size: 10px;
+  }
+
+  .hero-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 330px 40px;
+  }
+
+  .hero-info {
+    padding: 22px 20px 0;
+  }
+
+  .hero-info > .eyebrow {
+    margin-top: 15px;
+  }
+
+  .hero-info h1 {
+    font-size: 31px;
+  }
+
+  .hero-buttons {
+    margin-top: 13px;
+  }
+
+  .stage {
+    min-height: 330px;
+  }
+
+  .hero-footer {
+    grid-row: 3;
+  }
+
+  .actions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .chat-preview {
+    flex-wrap: wrap;
+  }
+
+  .chat-preview-content {
+    flex-basis: calc(100% - 65px);
+  }
+
+  .chat-preview > .btn {
+    width: 100%;
+  }
+
+  .editor-toolbar > label {
+    width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 440px) {
+  .welcome-card {
+    padding: 34px 19px;
+  }
+
+  .top-right {
+    gap: 5px;
+  }
+
+  .coin-box {
+    padding: 9px 8px;
+    font-size: 11px;
+  }
+
+  .level-box {
+    min-width: 43px;
+    padding: 5px;
+  }
+
+  .icon-btn {
+    width: 34px;
+    height: 35px;
+  }
+
+  .page-heading h2 {
+    font-size: 25px;
+  }
+
+  .stat-card {
+    padding: 11px;
+  }
+
+  .stat-number strong {
+    font-size: 20px;
+  }
+
+  .stat-number small {
+    display: none;
+  }
+
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .task-row {
+    gap: 8px;
+    padding: 11px;
+  }
+
+  .task-reward {
+    display: none;
+  }
+
+  .rename-box,
+  .reset-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .chat-controls {
+    flex-direction: column;
+  }
+
+  .voice-controls {
+    flex-direction: column;
+  }
+
+  .editor-toolbar > button {
+    flex: 1 1 40%;
+  }
+
+  .code-editor {
+    min-height: 280px;
+    font-size: 12px;
+  }
+}
+
+/* Барои касоне, ки ҳаракати камтар мехоҳанд */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
